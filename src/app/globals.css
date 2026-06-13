@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #1a1f5e;
+    --primary-light: #2d3480;
+    --accent: #f5a623;
+    --accent-dark: #d4891a;
+    --success: #10b981;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --surface: #ffffff;
+    --background: #f8f9fc;
+    --text-primary: #1a1f5e;
+    --text-secondary: #6b7280;
+    --border: #e5e7eb;
+
+    /* Legacy compatibility aliases */
+    --foreground: #1a1f5e;
+    --surface-muted: #f1f3f9;
+    --muted-foreground: #6b7280;
+    --selection-bg: #f5a623;
+    --selection-fg: #ffffff;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    background: var(--background);
+    color: var(--text-primary);
+  }
+
+  body {
+    @apply m-0 min-w-[320px] min-h-screen;
+    background: var(--background);
+    color: var(--text-primary);
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', system-ui, sans-serif;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  a {
+    @apply text-inherit no-underline;
+  }
+
+  ::selection {
+    background: var(--selection-bg);
+    color: var(--selection-fg);
+  }
+
+  pre {
+    color: inherit;
+  }
+
+  code {
+    color: inherit;
+  }
+}
+
+@layer utilities {
+  .font-sora {
+    font-family: 'Sora', system-ui, sans-serif;
+  }
+  .font-dm-sans {
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+  .text-primary-color {
+    color: var(--primary);
+  }
+  .text-accent-color {
+    color: var(--accent);
+  }
+  .bg-primary-color {
+    background-color: var(--primary);
+  }
+  .bg-accent-color {
+    background-color: var(--accent);
+  }
+  .border-primary-color {
+    border-color: var(--primary);
+  }
+}
